@@ -1,0 +1,15 @@
+<head>
+  <title>ToiletsApiTest</title>
+</head>
+
+<body>
+  <h1>The toilets:</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#each toilet}}
+    <p>{{_id}}: {{state}}</p>
+  {{/each}}
+</template>
