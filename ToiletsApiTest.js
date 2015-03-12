@@ -13,7 +13,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    var ToiletsServer = DDP.connect("localhost:13000");
+    var ToiletsServer = DDP.connect("localhost:3000");
     Toilets = new Mongo.Collection("toilets", ToiletsServer)
     ToiletsServer.subscribe("toilets");
   });
