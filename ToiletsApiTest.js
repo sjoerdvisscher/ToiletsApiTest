@@ -14,7 +14,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   var ToiletsServer
   Meteor.startup(function () {
-    ToiletsServer = DDP.connect("wclights.q070.nl:3000");
+    ToiletsServer = DDP.connect("wclights.q070.nl");
     Toilets = new Mongo.Collection("toilets", ToiletsServer)
     ToiletsServer.subscribe("toilets");
   });
