@@ -3,13 +3,17 @@
 </head>
 
 <body>
-  <h1>The toilets:</h1>
-
   {{> hello}}
 </body>
 
 <template name="hello">
+  <h1>The toilets:</h1>
   {{#each toilet}}
     <p>{{_id}}: {{state}}</p>
   {{/each}}
+  <h1>The lifts:</h1>
+  {{#each lift}}
+    <p>{{_id}}: {{level}}</p>
+  {{/each}}
+
 </template>
